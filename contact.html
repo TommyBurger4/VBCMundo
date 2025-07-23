@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nous Contacter - VBC Mundolsheim</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="public/favicon.ico">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="public/photo/utils/icon.png" alt="Logo VBC Mundolsheim" class="logo-img">
+                    <span class="logo-text">VBC Mundolsheim</span>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Accueil</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-users"></i>
+                            <span>Le Club</span>
+                            <i class="fas fa-chevron-down dropdown-icon"></i>
+                        </a>
+                        <ul class="dropdown-content">
+                            <li class="sub-dropdown">
+                                <a href="#" class="sub-link">
+                                    <i class="fas fa-volleyball-ball"></i>
+                                    Nos équipes
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="masculines.html">
+                                        <i class="fas fa-mars"></i>
+                                        Masculines
+                                    </a></li>
+                                    <li><a href="feminines.html">
+                                        <i class="fas fa-venus"></i>
+                                        Féminines
+                                    </a></li>
+                                    <li><a href="loisirs.html">
+                                        <i class="fas fa-heart"></i>
+                                        Loisirs
+                                    </a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="calendrier.html" class="nav-link">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Calendrier</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="photos.html" class="nav-link">
+                            <i class="fas fa-camera"></i>
+                            <span>Photos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="resultats.html" class="nav-link">
+                            <i class="fas fa-trophy"></i>
+                            <span>Résultats</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="documents.html" class="nav-link">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Documents</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link contact-btn active">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main style="margin-top: 80px;">
+        <!-- Hero Section Contact -->
+        <section class="page-hero">
+            <div class="page-hero-background">
+                <div class="page-hero-overlay"></div>
+                <div class="page-hero-content">
+                    <h1 class="page-hero-title">
+                        <i class="fas fa-envelope"></i> Nous Contacter
+                    </h1>
+                    <p class="page-hero-subtitle">Rejoignez notre famille volleyball !</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Contact -->
+        <section class="contact-detail">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info-section">
+                        <h2>Coordonnées du Club</h2>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Adresse</h3>
+                                <p>Gymnase Municipal<br>
+                                Rue des écoles<br>
+                                67450 Mundolsheim</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Téléphone</h3>
+                                <p>06 66 79 29 85</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>bureauvbcm@gmail.com</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="contact-form-section">
+                        <h2>Envoyez-nous un message</h2>
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label for="name">
+                                    <i class="fas fa-user"></i>
+                                    Nom et Prénom
+                                </label>
+                                <input type="text" id="name" name="name" placeholder="Entrez votre nom complet" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">
+                                    <i class="fas fa-envelope"></i>
+                                    Email
+                                </label>
+                                <input type="email" id="email" name="email" placeholder="votre.email@exemple.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">
+                                    <i class="fas fa-phone"></i>
+                                    Téléphone
+                                </label>
+                                <input type="tel" id="phone" name="phone" placeholder="06 XX XX XX XX">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">
+                                    <i class="fas fa-tag"></i>
+                                    Sujet
+                                </label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Choisissez un sujet</option>
+                                    <option value="inscription">Inscription au club</option>
+                                    <option value="information">Demande d'information</option>
+                                    <option value="entrainement">Essai d'entraînement gratuit</option>
+                                    <option value="partenariat">Partenariat / Sponsoring</option>
+                                    <option value="autre">Autre demande</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">
+                                    <i class="fas fa-comment-alt"></i>
+                                    Message
+                                </label>
+                                <textarea id="message" name="message" rows="6" placeholder="Écrivez votre message ici..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Envoyer le message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="public/photo/utils/icon.png" alt="VBC Mundolsheim">
+                        <span>VBC Mundolsheim</span>
+                    </div>
+                    <p>Club de volleyball passionné depuis 1975</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="masculines.html">Équipes Masculines</a></li>
+                        <li><a href="feminines.html">Équipes Féminines</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        bureauvbcm@gmail.com
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        06 66 79 29 85
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Rue des écoles, 67450 Mundolsheim
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 VBC Mundolsheim. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

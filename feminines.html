@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Équipes Féminines - VBC Mundolsheim</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="public/favicon.ico">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="public/photo/utils/icon.png" alt="Logo VBC Mundolsheim" class="logo-img">
+                    <span class="logo-text">VBC Mundolsheim</span>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Accueil</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link active">
+                            <i class="fas fa-users"></i>
+                            <span>Le Club</span>
+                            <i class="fas fa-chevron-down dropdown-icon"></i>
+                        </a>
+                        <ul class="dropdown-content">
+                            <li class="sub-dropdown">
+                                <a href="#" class="sub-link">
+                                    <i class="fas fa-volleyball-ball"></i>
+                                    Nos équipes
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="masculines.html">
+                                        <i class="fas fa-mars"></i>
+                                        Masculines
+                                    </a></li>
+                                    <li><a href="feminines.html" class="active">
+                                        <i class="fas fa-venus"></i>
+                                        Féminines
+                                    </a></li>
+                                    <li><a href="loisirs.html">
+                                        <i class="fas fa-heart"></i>
+                                        Loisirs
+                                    </a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="calendrier.html" class="nav-link">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Calendrier</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="photos.html" class="nav-link">
+                            <i class="fas fa-camera"></i>
+                            <span>Photos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="resultats.html" class="nav-link">
+                            <i class="fas fa-trophy"></i>
+                            <span>Résultats</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="documents.html" class="nav-link">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Documents</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link contact-btn">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main style="margin-top: 80px; padding-top: 40px;">
+        <!-- Section Équipes -->
+        <section class="teams-overview">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nos Équipes Féminines</h2>
+                    <p class="section-subtitle">Talent, détermination et esprit d'équipe</p>
+                </div>
+                
+                <div class="teams-grid">
+                    <div class="team-overview-card" data-aos="fade-up" data-aos-delay="100" onclick="showTeamModal('senior-f-prenat')">
+                        <div class="team-card-header">
+                            <div class="team-level">Pré-Nationale</div>
+                            <div class="team-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="team-card-content">
+                            <div class="team-photo">
+                                <img src="https://images.unsplash.com/photo-1594736797933-d0d15e49c2e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300&q=80" alt="Équipe Senior Féminine Elite">
+                            </div>
+                            <h3>Senior Féminine Elite</h3>
+                            <div class="team-stats">
+                                <div class="stat">
+                                    <span class="stat-number">11</span>
+                                    <span class="stat-label">Joueuses</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">3</span>
+                                    <span class="stat-label">Entraînements/sem</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">2e</span>
+                                    <span class="stat-label">Classement</span>
+                                </div>
+                            </div>
+                            <p>Notre équipe féminine de haut niveau avec des ambitions nationales</p>
+                            <div class="team-achievements">
+                                <span class="achievement">🥈 Vice-Champion 2024</span>
+                                <span class="achievement">⭐ 6 ans en Pré-Nat</span>
+                            </div>
+                            <div class="team-actions">
+                                <a href="joueurs-senior-f-elite.html" class="btn btn-primary">
+                                    <i class="fas fa-users"></i>
+                                    Joueurs
+                                </a>
+                                <a href="calendrier.html" class="btn btn-outline">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    Calendrier
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-overview-card" data-aos="fade-up" data-aos-delay="200" onclick="showTeamModal('senior-f-depart')">
+                        <div class="team-card-header">
+                            <div class="team-level">Départemental</div>
+                            <div class="team-icon">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                        </div>
+                        <div class="team-card-content">
+                            <div class="team-photo">
+                                <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300&q=80" alt="Équipe Senior Féminine Départemental">
+                            </div>
+                            <h3>Senior Féminine Départemental</h3>
+                            <div class="team-stats">
+                                <div class="stat">
+                                    <span class="stat-number">9</span>
+                                    <span class="stat-label">Joueuses</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">2</span>
+                                    <span class="stat-label">Entraînements/sem</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">1er</span>
+                                    <span class="stat-label">Classement</span>
+                                </div>
+                            </div>
+                            <p>Équipe performante au niveau départemental en quête de montée</p>
+                            <div class="team-achievements">
+                                <span class="achievement">🏆 Leader 2024</span>
+                                <span class="achievement">📈 Montée en vue</span>
+                            </div>
+                            <div class="team-actions">
+                                <a href="joueurs-senior-f-depart.html" class="btn btn-primary">
+                                    <i class="fas fa-users"></i>
+                                    Joueurs
+                                </a>
+                                <a href="calendrier.html" class="btn btn-outline">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    Calendrier
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-overview-card" data-aos="fade-up" data-aos-delay="300" onclick="showTeamModal('f18-depart')">
+                        <div class="team-card-header">
+                            <div class="team-level">F18</div>
+                            <div class="team-icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                        </div>
+                        <div class="team-card-content">
+                            <div class="team-photo">
+                                <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300&q=80" alt="Équipe F18 Départemental">
+                            </div>
+                            <h3>F18 Départemental</h3>
+                            <div class="team-stats">
+                                <div class="stat">
+                                    <span class="stat-number">7</span>
+                                    <span class="stat-label">Joueuses</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">2</span>
+                                    <span class="stat-label">Entraînements/sem</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">1er</span>
+                                    <span class="stat-label">Classement</span>
+                                </div>
+                            </div>
+                            <p>Nos jeunes talents féminines pleines d'avenir</p>
+                            <div class="team-achievements">
+                                <span class="achievement">🌟 Champion 2024</span>
+                                <span class="achievement">💪 Formation d'excellence</span>
+                            </div>
+                            <div class="team-actions">
+                                <a href="joueurs-f18-depart.html" class="btn btn-primary">
+                                    <i class="fas fa-users"></i>
+                                    Joueurs
+                                </a>
+                                <a href="calendrier.html" class="btn btn-outline">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    Calendrier
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Staff */
+        <section class="staff-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Notre Staff Féminin</h2>
+                    <p class="section-subtitle">Une équipe d'encadrement dédiée</p>
+                </div>
+                
+                <div class="staff-grid">
+                    <div class="staff-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="staff-photo">
+                            <div class="staff-placeholder">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="staff-info">
+                            <h3>Sophie Laurent</h3>
+                            <div class="staff-role">Entraîneuse Principale</div>
+                            <div class="staff-experience">12 ans d'expérience</div>
+                            <p>Ancienne internationale, elle dirige l'équipe Pré-Nationale depuis 5 ans.</p>
+                        </div>
+                    </div>
+
+                    <div class="staff-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="staff-photo">
+                            <div class="staff-placeholder">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="staff-info">
+                            <h3>Marie Dubois</h3>
+                            <div class="staff-role">Assistante Entraîneuse</div>
+                            <div class="staff-experience">6 ans d'expérience</div>
+                            <p>Spécialisée dans la technique et la formation des jeunes joueuses.</p>
+                        </div>
+                    </div>
+
+                    <div class="staff-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="staff-photo">
+                            <div class="staff-placeholder">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="staff-info">
+                            <h3>Céline Weber</h3>
+                            <div class="staff-role">Entraîneuse Jeunes</div>
+                            <div class="staff-experience">4 ans d'expérience</div>
+                            <p>Ancienne joueuse du club, elle développe les jeunes talents féminins.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal pour détails équipe -->
+    <div id="teamModal" class="modal">
+        <div class="modal-content team-modal">
+            <span class="close">&times;</span>
+            <div id="teamDetails"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="public/photo/utils/icon.png" alt="VBC Mundolsheim">
+                        <span>VBC Mundolsheim</span>
+                    </div>
+                    <p>Club de volleyball passionné depuis 1975</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="masculines.html">Équipes Masculines</a></li>
+                        <li><a href="feminines.html">Équipes Féminines</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        bureauvbcm@gmail.com
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        06 66 79 29 85
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Rue des écoles, 67450 Mundolsheim
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 VBC Mundolsheim. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="teams.js"></script>
+</body>
+</html>

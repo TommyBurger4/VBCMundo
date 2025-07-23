@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VBC Mundolsheim - Accueil</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="public/favicon.ico">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header et Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="public/photo/utils/icon.png" alt="Logo VBC Mundolsheim" class="logo-img">
+                    <span class="logo-text">VBC Mundolsheim</span>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">
+                            <i class="fas fa-home"></i>
+                            <span>Accueil</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-users"></i>
+                            <span>Le Club</span>
+                            <i class="fas fa-chevron-down dropdown-icon"></i>
+                        </a>
+                        <ul class="dropdown-content">
+                            <li class="sub-dropdown">
+                                <a href="#" class="sub-link">
+                                    <i class="fas fa-volleyball-ball"></i>
+                                    Nos équipes
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="masculines.html">
+                                        <i class="fas fa-mars"></i>
+                                        Masculines
+                                    </a></li>
+                                    <li><a href="feminines.html">
+                                        <i class="fas fa-venus"></i>
+                                        Féminines
+                                    </a></li>
+                                    <li><a href="loisirs.html">
+                                        <i class="fas fa-heart"></i>
+                                        Loisirs
+                                    </a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="calendrier.html" class="nav-link">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Calendrier</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="photos.html" class="nav-link">
+                            <i class="fas fa-camera"></i>
+                            <span>Photos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="resultats.html" class="nav-link">
+                            <i class="fas fa-trophy"></i>
+                            <span>Résultats</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="documents.html" class="nav-link">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Documents</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link contact-btn">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section avec animations -->
+        <section class="hero">
+            <div class="hero-background">
+                <div class="hero-overlay"></div>
+                <div class="hero-particles"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="hero-title-line">VBC</span>
+                        <span class="hero-title-line">Mundolsheim</span>
+                    </h1>
+                    <p class="hero-subtitle">Club de Volleyball passionné depuis 1975</p>
+                    <div class="hero-buttons">
+                        <a href="masculines.html" class="btn btn-primary">
+                            <i class="fas fa-volleyball-ball"></i>
+                            Nos Équipes
+                        </a>
+                        <a href="contact.html" class="btn btn-outline">
+                            <i class="fas fa-envelope"></i>
+                            Nous Contacter
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-scroll">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Section Prochains Matchs modernisée -->
+        <section class="matches-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Prochains Matchs</h2>
+                    <p class="section-subtitle">Venez soutenir nos équipes !</p>
+                </div>
+                
+                <div class="matches-grid">
+                    <div class="match-card modern" data-aos="slide-up" data-aos-delay="100">
+                        <div class="match-date">
+                            <span class="day">27</span>
+                            <span class="month">Juil</span>
+                        </div>
+                        <div class="match-content">
+                            <div class="match-teams">
+                                <div class="team home">
+                                    <span class="team-name">VBC Mundolsheim</span>
+                                    <span class="team-category">Senior Masculin</span>
+                                </div>
+                                <div class="vs">VS</div>
+                                <div class="team away">
+                                    <span class="team-name">AS Strasbourg</span>
+                                    <span class="team-category">Senior Masculin</span>
+                                </div>
+                            </div>
+                            <div class="match-info">
+                                <div class="match-time">
+                                    <i class="fas fa-clock"></i>
+                                    20h00
+                                </div>
+                                <div class="match-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Gymnase Municipal
+                                </div>
+                                <div class="match-type home-game">
+                                    <i class="fas fa-home"></i>
+                                    Domicile
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="match-card modern" data-aos="slide-up" data-aos-delay="200">
+                        <div class="match-date">
+                            <span class="day">28</span>
+                            <span class="month">Juil</span>
+                        </div>
+                        <div class="match-content">
+                            <div class="match-teams">
+                                <div class="team home">
+                                    <span class="team-name">RC Colmar</span>
+                                    <span class="team-category">Senior Féminin</span>
+                                </div>
+                                <div class="vs">VS</div>
+                                <div class="team away">
+                                    <span class="team-name">VBC Mundolsheim</span>
+                                    <span class="team-category">Senior Féminin</span>
+                                </div>
+                            </div>
+                            <div class="match-info">
+                                <div class="match-time">
+                                    <i class="fas fa-clock"></i>
+                                    15h30
+                                </div>
+                                <div class="match-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Gymnase Colmar
+                                </div>
+                                <div class="match-type away-game">
+                                    <i class="fas fa-plane"></i>
+                                    Extérieur
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="calendar-link">
+                    <a href="calendrier.html" class="btn btn-primary">
+                        <i class="fas fa-calendar-alt"></i>
+                        Voir le calendrier complet
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Actualités modernisée -->
+        <section class="news-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Dernières Actualités</h2>
+                    <p class="section-subtitle">Suivez l'actualité de votre club</p>
+                </div>
+                
+                <div class="news-grid">
+                    <article class="news-card featured" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Équipe masculine">
+                            <div class="news-category">Victoire</div>
+                        </div>
+                        <div class="news-content">
+                            <h3>Victoire éclatante des Seniors !</h3>
+                            <p>L'équipe senior masculine s'impose brillamment 3-1 face à Haguenau lors du dernier match de championnat, consolidant sa position en tête du classement.</p>
+                            <div class="news-meta">
+                                <span class="news-date">
+                                    <i class="fas fa-calendar"></i>
+                                    20 Juillet 2025
+                                </span>
+                                <span class="news-author">
+                                    <i class="fas fa-user"></i>
+                                    Admin Club
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-aos="slide-right" data-aos-delay="200">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1594736797933-d0d15e49c2e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Équipe féminine">
+                            <div class="news-category">Qualification</div>
+                        </div>
+                        <div class="news-content">
+                            <h3>Qualification en demi-finale</h3>
+                            <p>Nos féminines se qualifient brillamment pour les demi-finales départementales après leur victoire 3-0.</p>
+                            <div class="news-meta">
+                                <span class="news-date">
+                                    <i class="fas fa-calendar"></i>
+                                    18 Juillet 2025
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-aos="slide-left" data-aos-delay="300">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Entraînement">
+                            <div class="news-category">Formation</div>
+                        </div>
+                        <div class="news-content">
+                            <h3>Stage d'été ouvert !</h3>
+                            <p>Inscriptions ouvertes pour le stage d'été destiné aux jeunes de 12 à 18 ans. Places limitées !</p>
+                            <div class="news-meta">
+                                <span class="news-date">
+                                    <i class="fas fa-calendar"></i>
+                                    15 Juillet 2025
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content" data-aos="fade-up">
+                    <h2>Rejoignez l'aventure VBC Mundolsheim</h2>
+                    <p>Que vous soyez débutant ou confirmé, nous avons une place pour vous dans notre club familial et passionné.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i>
+                            Nous Contacter
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="public/photo/utils/icon.png" alt="VBC Mundolsheim">
+                        <span>VBC Mundolsheim</span>
+                    </div>
+                    <p>Club de volleyball passionné depuis 1975</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="masculines.html">Équipes Masculines</a></li>
+                        <li><a href="feminines.html">Équipes Féminines</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        bureauvbcm@gmail.com
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        06 66 79 29 85
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Rue des écoles, 67450 Mundolsheim
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 VBC Mundolsheim. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

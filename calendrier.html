@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendrier des Matchs - VBC Mundolsheim</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="public/favicon.ico">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="public/photo/utils/icon.png" alt="Logo VBC Mundolsheim" class="logo-img">
+                    <span class="logo-text">VBC Mundolsheim</span>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Accueil</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-users"></i>
+                            <span>Le Club</span>
+                            <i class="fas fa-chevron-down dropdown-icon"></i>
+                        </a>
+                        <ul class="dropdown-content">
+                            <li class="sub-dropdown">
+                                <a href="#" class="sub-link">
+                                    <i class="fas fa-volleyball-ball"></i>
+                                    Nos équipes
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="masculines.html">
+                                        <i class="fas fa-mars"></i>
+                                        Masculines
+                                    </a></li>
+                                    <li><a href="feminines.html">
+                                        <i class="fas fa-venus"></i>
+                                        Féminines
+                                    </a></li>
+                                    <li><a href="loisirs.html">
+                                        <i class="fas fa-heart"></i>
+                                        Loisirs
+                                    </a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="calendrier.html" class="nav-link active">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Calendrier</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="photos.html" class="nav-link">
+                            <i class="fas fa-camera"></i>
+                            <span>Photos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="resultats.html" class="nav-link">
+                            <i class="fas fa-trophy"></i>
+                            <span>Résultats</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="documents.html" class="nav-link">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Documents</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link contact-btn">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main style="margin-top: 80px;">
+        <!-- Hero Section Calendrier -->
+        <section class="page-hero">
+            <div class="page-hero-background">
+                <div class="page-hero-overlay"></div>
+                <div class="page-hero-content">
+                    <h1 class="page-hero-title">
+                        <i class="fas fa-calendar-alt"></i> Calendrier des Matchs
+                    </h1>
+                    <p class="page-hero-subtitle">Saison 2024-2025</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Calendriers -->
+        <section class="calendar-section">
+            <div class="container">
+                <div class="calendar-header">
+                    <h2>Programme Complet de la Saison</h2>
+                    <p>Retrouvez tous les matchs de nos équipes seniors</p>
+                </div>
+                
+                <div class="calendars-grid">
+                    <!-- Calendrier Masculin -->
+                    <div class="calendar-column">
+                        <div class="calendar-title">
+                            <i class="fas fa-mars"></i>
+                            <h3>Équipe Senior Masculine</h3>
+                            <span class="level-badge">Pré-Nationale</span>
+                        </div>
+                        
+                        <div class="calendar-matches">
+                            <div class="match-item home">
+                                <div class="match-date">
+                                    <span class="day">27</span>
+                                    <span class="month">Juil</span>
+                                </div>
+                                <div class="match-info">
+                                    <div class="teams">
+                                        <span class="home-team">VBC Mundolsheim</span>
+                                        <span class="vs">vs</span>
+                                        <span class="away-team">AS Strasbourg</span>
+                                    </div>
+                                    <div class="match-details">
+                                        <span class="time"><i class="fas fa-clock"></i> 20h00</span>
+                                        <span class="location"><i class="fas fa-home"></i> Domicile</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="match-item away">
+                                <div class="match-date">
+                                    <span class="day">03</span>
+                                    <span class="month">Août</span>
+                                </div>
+                                <div class="match-info">
+                                    <div class="teams">
+                                        <span class="home-team">RC Haguenau</span>
+                                        <span class="vs">vs</span>
+                                        <span class="away-team">VBC Mundolsheim</span>
+                                    </div>
+                                    <div class="match-details">
+                                        <span class="time"><i class="fas fa-clock"></i> 19h30</span>
+                                        <span class="location"><i class="fas fa-plane"></i> Extérieur</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="match-item home">
+                                <div class="match-date">
+                                    <span class="day">10</span>
+                                    <span class="month">Août</span>
+                                </div>
+                                <div class="match-info">
+                                    <div class="teams">
+                                        <span class="home-team">VBC Mundolsheim</span>
+                                        <span class="vs">vs</span>
+                                        <span class="away-team">VB Sélestat</span>
+                                    </div>
+                                    <div class="match-details">
+                                        <span class="time"><i class="fas fa-clock"></i> 20h00</span>
+                                        <span class="location"><i class="fas fa-home"></i> Domicile</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="match-item away">
+                                <div class="match-date">
+                                    <span class="day">17</span>
+                                    <span class="month">Août</span>
+                                </div>
+                                <div class="match-info">
+                                    <div class="teams">
+                                        <span class="home-team">Mulhouse VB</span>
+                                        <span class="vs">vs</span>
+                                        <span class="away-team">VBC Mundolsheim</span>
+                                    </div>
+                                    <div class="match-details">
+                                        <span class="time"><i class="fas fa-clock"></i> 20h30</span>
+                                        <span class="location"><i class="fas fa-plane"></i> Extérieur</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="match-item home">
+                                <div class="match-date">
+                                    <span class="day">24</span>
+                                    <span class="month">Août</span>
+                                </div>
+                                <div class="match-info">
+                                    <div class="teams">
+                                        <span class="home-team">VBC Mundolsheim</span>
+                                        <span class="vs">vs</span>
+                                        <span class="away-team">Illkirch VB</span>
+                                    </div>
+                                    <div class="match-details">
+                                        <span class="time"><i class="fas fa-clock"></i> 20h00</span>
+                                        <span class="location"><i class="fas fa-home"></i> Domicile</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="match-item away">
+                                <div class="match-date">
+                                    <span class="day">31</span>
+                                    <span class="month">Août</span>
+                                </div>
+                                <div class="match-info">
+                                    <div class="teams">
+                                        <span class="home-team">Obernai VS</span>
+                                        <span class="vs">vs</span>
+                                        <span class="away-team">VBC Mundolsheim</span>
+                                    </div>
+                                    <div class="match-details">
+                                        <span class="time"><i class="fas fa-clock"></i> 19h00</span>
+                                        <span class="location"><i class="fas fa-plane"></i> Extérieur</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Calendrier Féminin -->
+                    <div class="calendar-column">
+                        <div class="calendar-title">
+                            <i class="fas fa-venus"></i>
+                            <h3>Équipe Senior Féminine</h3>
+                            <span class="level-badge">Pré-Nationale</span>
+                        </div>
+                        
+                        <div class="calendar-matches">
+                            <div class="match-item away">
+                                <div class="match-date">
+                                    <span class="day">28</span>
+                                    <span class="month">Juil</span>
+                                </div>
+                                <div class="match-info">
+                                    <div class="teams">
+                                        <span class="home-team">RC Colmar</span>
+                                        <span class="vs">vs</span>
+                                        <span class="away-team">VBC Mundolsheim</span>
+                                    </div>
+                                    <div class="match-details">
+                                        <span class="time"><i class="fas fa-clock"></i> 15h30</span>
+                                        <span class="location"><i class="fas fa-plane"></i> Extérieur</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="match-item home">
+                                <div class="match-date">
+                                    <span class="day">04</span>
+                                    <span class="month">Août</span>
+                                </div>
+                                <div class="match-info">
+                                    <div class="teams">
+                                        <span class="home-team">VBC Mundolsheim</span>
+                                        <span class="vs">vs</span>
+                                        <span class="away-team">Strasbourg UC</span>
+                                    </div>
+                                    <div class="match-details">
+                                        <span class="time"><i class="fas fa-clock"></i> 16h00</span>
+                                        <span class="location"><i class="fas fa-home"></i> Domicile</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="match-item away">
+                                <div class="match-date">
+                                    <span class="day">11</span>
+                                    <span class="month">Août</span>
+                                </div>
+                                <div class="match-info">
+                                    <div class="teams">
+                                        <span class="home-team">Haguenau VB</span>
+                                        <span class="vs">vs</span>
+                                        <span class="away-team">VBC Mundolsheim</span>
+                                    </div>
+                                    <div class="match-details">
+                                        <span class="time"><i class="fas fa-clock"></i> 18h00</span>
+                                        <span class="location"><i class="fas fa-plane"></i> Extérieur</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="match-item home">
+                                <div class="match-date">
+                                    <span class="day">18</span>
+                                    <span class="month">Août</span>
+                                </div>
+                                <div class="match-info">
+                                    <div class="teams">
+                                        <span class="home-team">VBC Mundolsheim</span>
+                                        <span class="vs">vs</span>
+                                        <span class="away-team">Sélestat VB</span>
+                                    </div>
+                                    <div class="match-details">
+                                        <span class="time"><i class="fas fa-clock"></i> 16h00</span>
+                                        <span class="location"><i class="fas fa-home"></i> Domicile</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="match-item home">
+                                <div class="match-date">
+                                    <span class="day">25</span>
+                                    <span class="month">Août</span>
+                                </div>
+                                <div class="match-info">
+                                    <div class="teams">
+                                        <span class="home-team">VBC Mundolsheim</span>
+                                        <span class="vs">vs</span>
+                                        <span class="away-team">Mulhouse AS</span>
+                                    </div>
+                                    <div class="match-details">
+                                        <span class="time"><i class="fas fa-clock"></i> 16h00</span>
+                                        <span class="location"><i class="fas fa-home"></i> Domicile</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="match-item away">
+                                <div class="match-date">
+                                    <span class="day">01</span>
+                                    <span class="month">Sept</span>
+                                </div>
+                                <div class="match-info">
+                                    <div class="teams">
+                                        <span class="home-team">Illkirch GV</span>
+                                        <span class="vs">vs</span>
+                                        <span class="away-team">VBC Mundolsheim</span>
+                                    </div>
+                                    <div class="match-details">
+                                        <span class="time"><i class="fas fa-clock"></i> 17h00</span>
+                                        <span class="location"><i class="fas fa-plane"></i> Extérieur</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calendar-footer">
+                    <div class="download-section">
+                        <h3>Télécharger les calendriers</h3>
+                        <div class="download-buttons">
+                            <a href="#" class="btn btn-outline">
+                                <i class="fas fa-download"></i>
+                                Calendrier Masculin (PDF)
+                            </a>
+                            <a href="#" class="btn btn-outline">
+                                <i class="fas fa-download"></i>
+                                Calendrier Féminin (PDF)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="public/photo/utils/icon.png" alt="VBC Mundolsheim">
+                        <span>VBC Mundolsheim</span>
+                    </div>
+                    <p>Club de volleyball passionné depuis 1975</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="masculines.html">Équipes Masculines</a></li>
+                        <li><a href="feminines.html">Équipes Féminines</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        bureauvbcm@gmail.com
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        06 66 79 29 85
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Rue des écoles, 67450 Mundolsheim
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 VBC Mundolsheim. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
