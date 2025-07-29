@@ -179,7 +179,6 @@ img {
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    box-shadow: var(--shadow);
     transition: var(--transition);
 }
 
@@ -366,12 +365,18 @@ img {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 800%; /* 8 images (4 originales + 4 dupliquées) donc 800% */
     height: 100%;
-    background: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    transition: transform 0.8s ease-in-out;
+}
+
+.hero-slide {
+    width: 12.5%; /* 100% / 8 images */
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero-overlay {

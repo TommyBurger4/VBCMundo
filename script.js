@@ -352,3 +352,45 @@ window.addEventListener('scroll', throttle(() => {
     animateOnScroll();
     // Autres fonctions de scroll ici
 }, 50));
+
+// Carrousel automatique des images d'équipe avec défilement continu vers la droite
+function initHeroImageCarousel() {
+    const heroBackground = document.querySelector('.hero-background');
+    if (!heroBackground) return;
+    
+    let currentSlide = 0;
+    const totalSlides = 4; // Nombre d'images uniques
+    const totalElements = 8; // Nombre total d'éléments (4 originaux + 4 dupliqués)
+    
+    function slideToNext() {
+        currentSlide++;
+        
+        // Calculer la position de défilement (chaque slide fait 12.5% de largeur)
+        const translateX = -(currentSlide * 12.5);
+        
+        // Appliquer la transformation pour faire défiler vers la droite
+        heroBackground.style.transform = `translateX(${translateX}%)`;
+        
+        // Quand on arrive à la fin des slides originaux, on revient au début sans transition
+        if (currentSlide >= totalSlides) {
+            setTimeout(() => {
+                heroBackground.style.transition = 'none';
+                currentSlide = 0;
+                heroBackground.style.transform = `translateX(0%)`;
+                
+                // Remettre la transition après un court délai
+                setTimeout(() => {
+                    heroBackground.style.transition = 'transform 0.8s ease-in-out';
+                }, 50);
+            }, 800); // Attendre la fin de l'animation actuelle
+        }
+    }
+    
+    // Défilement automatique toutes les 5 secondes (5000ms)
+    setInterval(slideToNext, 5000);
+}
+
+// Initialiser le carrousel au chargement de la page
+document.addEventListener('DOMContentLoaded', function() {
+    initHeroImageCarousel();
+});
