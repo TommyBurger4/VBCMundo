@@ -1,0 +1,11 @@
+{
+  "name": "vbc-mundolsheim-site",
+  "version": "1.0.0",
+  "description": "Site web du VBC Mundolsheim",
+  "scripts": {
+    "start": "npx http-server . -p 8000 -c-1 --cors",
+    "dev": "npx http-server . -p 8000 -c-1 --cors -o"
+  },
+  "keywords": ["volleyball", "mundolsheim", "vbc"],
+  "author": "VBC Mundolsheim"
+}

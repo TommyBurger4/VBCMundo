@@ -144,80 +144,17 @@
                     <p class="section-subtitle">Venez soutenir nos équipes !</p>
                 </div>
                 
-                <div class="matches-grid">
-                    <div class="match-card modern" data-aos="slide-up" data-aos-delay="100">
-                        <div class="match-date">
-                            <span class="day">27</span>
-                            <span class="month">Juil</span>
-                        </div>
-                        <div class="match-content">
-                            <div class="match-teams">
-                                <div class="team home">
-                                    <span class="team-name">VBC Mundolsheim</span>
-                                    <span class="team-category">Senior Masculin</span>
-                                </div>
-                                <div class="vs">VS</div>
-                                <div class="team away">
-                                    <span class="team-name">AS Strasbourg</span>
-                                    <span class="team-category">Senior Masculin</span>
-                                </div>
-                            </div>
-                            <div class="match-info">
-                                <div class="match-time">
-                                    <i class="fas fa-clock"></i>
-                                    20h00
-                                </div>
-                                <div class="match-location">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    Gymnase Municipal
-                                </div>
-                                <div class="match-type home-game">
-                                    <i class="fas fa-home"></i>
-                                    Domicile
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="match-card modern" data-aos="slide-up" data-aos-delay="200">
-                        <div class="match-date">
-                            <span class="day">28</span>
-                            <span class="month">Juil</span>
-                        </div>
-                        <div class="match-content">
-                            <div class="match-teams">
-                                <div class="team home">
-                                    <span class="team-name">RC Colmar</span>
-                                    <span class="team-category">Senior Féminin</span>
-                                </div>
-                                <div class="vs">VS</div>
-                                <div class="team away">
-                                    <span class="team-name">VBC Mundolsheim</span>
-                                    <span class="team-category">Senior Féminin</span>
-                                </div>
-                            </div>
-                            <div class="match-info">
-                                <div class="match-time">
-                                    <i class="fas fa-clock"></i>
-                                    15h30
-                                </div>
-                                <div class="match-location">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    Gymnase Colmar
-                                </div>
-                                <div class="match-type away-game">
-                                    <i class="fas fa-plane"></i>
-                                    Extérieur
-                                </div>
-                            </div>
-                        </div>
+                <div id="upcoming-matches-widget" class="upcoming-matches-widget">
+                    <div class="loading-widget">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <p>Chargement des prochains matchs...</p>
                     </div>
                 </div>
                 
                 <div class="calendar-link">
                     <a href="calendrier.html" class="btn btn-primary">
                         <i class="fas fa-calendar-alt"></i>
-                        Voir le calendrier complet
+                        Voir tous les matchs
                     </a>
                 </div>
             </div>
@@ -354,6 +291,8 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
     <script src="script.js"></script>
+    <script src="home-calendar-widget.js"></script>
 </body>
 </html>
