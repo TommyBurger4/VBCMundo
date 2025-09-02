@@ -264,91 +264,9 @@ class CalendarManager {
         container.appendChild(structure);
     }
     
-    // Affichage par équipe (filtres spécifiques)
+    // Tous les affichages utilisent maintenant le format chronologique
     renderTeamBasedCalendar(container) {
-        // Séparer les équipes masculines et féminines
-        const masculineTeams = {};
-        const feminineTeams = {};
-        
-        this.filteredMatches.forEach(match => {
-            const teamName = match.equipe.toLowerCase();
-            
-            // Déterminer si c'est une équipe féminine
-            if (teamName.includes('fémin') || teamName.includes('fille') || teamName.includes('f18') || teamName.includes('f21')) {
-                if (!feminineTeams[match.equipe]) {
-                    feminineTeams[match.equipe] = [];
-                }
-                feminineTeams[match.equipe].push(match);
-            } else {
-                // Équipes masculines
-                if (!masculineTeams[match.equipe]) {
-                    masculineTeams[match.equipe] = [];
-                }
-                masculineTeams[match.equipe].push(match);
-            }
-        });
-        
-        // Créer la structure avec deux sections
-        const structure = document.createElement('div');
-        structure.className = 'calendars-structure';
-        
-        // Section Masculine
-        if (Object.keys(masculineTeams).length > 0) {
-            const masculineSection = document.createElement('div');
-            masculineSection.className = 'gender-section masculine-section';
-            
-            const masculineTitle = document.createElement('h2');
-            masculineTitle.className = 'gender-section-title';
-            masculineTitle.innerHTML = '<i class="fas fa-mars"></i> Équipes Masculines';
-            masculineSection.appendChild(masculineTitle);
-            
-            const masculineGrid = document.createElement('div');
-            masculineGrid.className = 'calendars-grid';
-            
-            // Trier les équipes masculines (Senior 1, Senior 2, Senior 3)
-            const sortedMasculineTeams = Object.keys(masculineTeams).sort((a, b) => {
-                // Extraire le numéro de "Senior 1", "Senior 2", etc.
-                const matchA = a.match(/Senior\s+(\d+)/);
-                const matchB = b.match(/Senior\s+(\d+)/);
-                
-                if (matchA && matchB) {
-                    return parseInt(matchA[1]) - parseInt(matchB[1]);
-                }
-                return a.localeCompare(b);
-            });
-            
-            sortedMasculineTeams.forEach(team => {
-                const column = this.createTeamColumn(team, masculineTeams[team], 'masculine');
-                masculineGrid.appendChild(column);
-            });
-            
-            masculineSection.appendChild(masculineGrid);
-            structure.appendChild(masculineSection);
-        }
-        
-        // Section Féminine
-        if (Object.keys(feminineTeams).length > 0) {
-            const feminineSection = document.createElement('div');
-            feminineSection.className = 'gender-section feminine-section';
-            
-            const feminineTitle = document.createElement('h2');
-            feminineTitle.className = 'gender-section-title';
-            feminineTitle.innerHTML = '<i class="fas fa-venus"></i> Équipes Féminines';
-            feminineSection.appendChild(feminineTitle);
-            
-            const feminineGrid = document.createElement('div');
-            feminineGrid.className = 'calendars-grid';
-            
-            Object.keys(feminineTeams).sort().forEach(team => {
-                const column = this.createTeamColumn(team, feminineTeams[team], 'feminine');
-                feminineGrid.appendChild(column);
-            });
-            
-            feminineSection.appendChild(feminineGrid);
-            structure.appendChild(feminineSection);
-        }
-        
-        container.appendChild(structure);
+        this.renderChronologicalCalendar(container);
     }
     
     // Extraire le numéro d'équipe (1, 2, 3, etc.)
@@ -409,73 +327,9 @@ class CalendarManager {
         return column;
     }
 
-    // Créer un élément de match
+    // Créer un élément de match (utilise le même style chronologique)
     createMatchItem(match) {
-        const item = document.createElement('div');
-        const isHome = match.lieu.toLowerCase() === 'domicile';
-        const isPast = match.date < new Date();
-        const hasResult = match.scoreNous !== null && match.scoreAdversaire !== null;
-        
-        item.className = `match-item ${isHome ? 'home' : 'away'} ${isPast && !hasResult ? 'past' : ''}`;
-        
-        // Formater la date
-        const day = match.date.getDate();
-        const monthNames = ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Août', 'Sep', 'Oct', 'Nov', 'Déc'];
-        const month = monthNames[match.date.getMonth()];
-        
-        // Construire le HTML du match
-        let resultHTML = '';
-        if (hasResult) {
-            const isWin = match.scoreNous > match.scoreAdversaire;
-            const resultClass = isWin ? 'win' : (match.scoreNous < match.scoreAdversaire ? 'loss' : 'draw');
-            
-            resultHTML = `
-                <div class="match-result ${resultClass}">
-                    <span class="score">${match.scoreNous} - ${match.scoreAdversaire}</span>
-                    <span class="result-label">${isWin ? 'Victoire' : (match.scoreNous < match.scoreAdversaire ? 'Défaite' : 'Égalité')}</span>
-                </div>
-            `;
-        }
-        
-        // Créer le HTML pour le logo
-        let logoHTML = '';
-        if (match.logo) {
-            // Si le logo est un nom de fichier, construire le chemin complet
-            const logoPath = match.logo.startsWith('http') ? match.logo : `public/logos/${match.logo}`;
-            logoHTML = `
-                <div class="team-logo">
-                    <img src="${logoPath}" alt="${match.adversaire}" onerror="this.style.display='none'">
-                </div>
-            `;
-        }
-        
-        item.innerHTML = `
-            <div class="match-date">
-                <span class="day">${day}</span>
-                <span class="month">${month}</span>
-            </div>
-            <div class="match-info">
-                ${logoHTML}
-                <div class="teams">
-                    ${isHome ? 
-                        `<span class="home-team">VBC Mundolsheim</span>
-                         <span class="vs">vs</span>
-                         <span class="away-team">${match.adversaire}</span>` :
-                        `<span class="home-team">${match.adversaire}</span>
-                         <span class="vs">vs</span>
-                         <span class="away-team">VBC Mundolsheim</span>`
-                    }
-                </div>
-                <div class="match-details">
-                    <span class="time"><i class="fas fa-clock"></i> ${match.heure}</span>
-                    <span class="location"><i class="fas fa-${isHome ? 'home' : 'plane'}"></i> ${match.lieu}</span>
-                    ${match.type ? `<span class="match-type ${this.getTypeClass(match.type)}"><i class="fas ${this.getTypeIcon(match.type)}"></i> ${match.type}</span>` : ''}
-                </div>
-                ${resultHTML}
-            </div>
-        `;
-        
-        return item;
+        return this.createChronologicalMatchItem(match);
     }
     
     // Créer un élément de match chronologique
@@ -493,13 +347,20 @@ class CalendarManager {
         const month = monthNames[match.date.getMonth()];
         const dayName = match.date.toLocaleDateString('fr-FR', { weekday: 'long' });
         
-        // Logo HTML
+        // Logo HTML - toujours afficher le logo de l'équipe adverse
         let logoHTML = '';
         if (match.logo) {
             const logoPath = match.logo.startsWith('http') ? match.logo : `public/logos/${match.logo}`;
             logoHTML = `
                 <div class="chronological-logo">
                     <img src="${logoPath}" alt="${match.adversaire}" onerror="this.style.display='none'">
+                </div>
+            `;
+        } else {
+            // Logo par défaut générique pour les équipes sans logo
+            logoHTML = `
+                <div class="chronological-logo">
+                    <div class="default-logo">${match.adversaire.substring(0, 2).toUpperCase()}</div>
                 </div>
             `;
         }
