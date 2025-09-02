@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos - VBC Mundolsheim</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="public/favicon.ico">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="public/photo/utils/icon.png" alt="Logo VBC Mundolsheim" class="logo-img">
+                    <span class="logo-text">VBC Mundolsheim</span>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Accueil</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-users"></i>
+                            <span>Le Club</span>
+                            <i class="fas fa-chevron-down dropdown-icon"></i>
+                        </a>
+                        <ul class="dropdown-content">
+                            <li class="sub-dropdown">
+                                <a href="#" class="sub-link">
+                                    <i class="fas fa-volleyball-ball"></i>
+                                    Nos équipes
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="masculines.html">
+                                        <i class="fas fa-mars"></i>
+                                        Masculines
+                                    </a></li>
+                                    <li><a href="feminines.html">
+                                        <i class="fas fa-venus"></i>
+                                        Féminines
+                                    </a></li>
+                                    <li><a href="loisirs.html">
+                                        <i class="fas fa-heart"></i>
+                                        Loisirs
+                                    </a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="calendrier.html" class="nav-link">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Calendrier</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="photos.html" class="nav-link active">
+                            <i class="fas fa-camera"></i>
+                            <span>Photos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="resultats.html" class="nav-link">
+                            <i class="fas fa-trophy"></i>
+                            <span>Résultats</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="documents.html" class="nav-link">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Documents</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link contact-btn">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main style="margin-top: 80px;">
+        <!-- Hero Section Photos -->
+        <section class="page-hero">
+            <div class="page-hero-background">
+                <div class="page-hero-overlay"></div>
+                <div class="page-hero-content">
+                    <h1 class="page-hero-title">
+                        <i class="fas fa-camera"></i> Galerie Photos
+                    </h1>
+                    <p class="page-hero-subtitle">Nos équipes en action</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Albums Photos -->
+        <section class="photos-section">
+            <div class="container">
+                <div class="photos-header">
+                    <h2>Albums Photos</h2>
+                    <p>Découvrez nos albums photos</p>
+                </div>
+                
+                
+                <!-- Liste des Albums -->
+                <div id="albums-grid" class="albums-grid">
+                    <!-- Les albums seront affichés dynamiquement ici -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal de visualisation d'album -->
+        <div id="album-view-modal" class="modal">
+            <div class="modal-content album-view-content">
+                <div class="modal-header">
+                    <h3 id="album-view-title">Album</h3>
+                    <button class="close-modal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="album-photos-grid" class="album-photos-grid">
+                        <!-- Photos de l'album -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="public/photo/utils/icon.png" alt="VBC Mundolsheim">
+                        <span>VBC Mundolsheim</span>
+                    </div>
+                    <p>Club de volleyball passionné depuis 1975</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="masculines.html">Équipes Masculines</a></li>
+                        <li><a href="feminines.html">Équipes Féminines</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        bureauvbcm@gmail.com
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        06 66 79 29 85
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Rue des écoles, 67450 Mundolsheim
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 VBC Mundolsheim. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="photo-viewer.js"></script>
+</body>
+</html>
