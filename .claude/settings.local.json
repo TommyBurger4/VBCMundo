@@ -13,7 +13,19 @@
       "Bash(python:*)",
       "Bash(curl:*)",
       "Bash(git checkout:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(pip install:*)",
+      "Bash(apt:*)",
+      "Bash(apt install:*)",
+      "Bash(lsof:*)",
+      "Bash(for:*)",
+      "Bash(do)",
+      "Bash(if grep -q \"Résultats\" \"$file\")",
+      "Bash(then)",
+      "Bash(sed:*)",
+      "Bash(fi)",
+      "Bash(done)",
+      "Bash(if grep -q 'href=\"\"resultats.html\"\"' \"$file\")"
     ],
     "deny": []
   }

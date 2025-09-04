@@ -1,0 +1,27 @@
+{
+  "masculin-prenat": {
+    "victories": 4,
+    "defeats": 2,
+    "matches": 6
+  },
+  "masculin-excellence": {
+    "victories": 1,
+    "defeats": 1,
+    "matches": 2
+  },
+  "masculin-honneur": {
+    "victories": 1,
+    "defeats": 0,
+    "matches": 1
+  },
+  "feminin-regionale": {
+    "victories": 0,
+    "defeats": 0,
+    "matches": 0
+  },
+  "loisirs": {
+    "victories": 0,
+    "defeats": 0,
+    "matches": 0
+  }
+}

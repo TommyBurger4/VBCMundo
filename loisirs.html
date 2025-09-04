@@ -69,11 +69,6 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="resultats.html" class="nav-link">
-                            <i class="fas fa-trophy"></i>
-                            <span>Résultats</span>
-                        </a>
-                    </li>
                     <li class="nav-item">
                         <a href="documents.html" class="nav-link">
                             <i class="fas fa-file-alt"></i>
@@ -106,37 +101,37 @@
                     <p class="section-subtitle">Plaisir, convivialité et sport accessible à tous</p>
                 </div>
                 
-                <div class="teams-grid">
-                    <div class="team-overview-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="teams-grid" style="justify-content: center;">
+                    <div class="team-overview-card" data-aos="fade-up" data-aos-delay="100" onclick="showTeamModal('loisirs')">
                         <div class="team-card-header">
-                            <div class="team-level">Loisirs Mixte</div>
+                            <div class="team-level">Loisirs</div>
                             <div class="team-icon">
                                 <i class="fas fa-heart"></i>
                             </div>
                         </div>
                         <div class="team-card-content">
                             <div class="team-photo">
-                                <img src="https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300&q=80" alt="Groupe Volleyball Loisirs Mixte">
+                                <img src="https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300&q=80" alt="Équipe Loisirs">
                             </div>
-                            <h3>Volleyball Mixte Adultes</h3>
+                            <h3>Équipe Loisirs</h3>
                             <div class="team-stats">
                                 <div class="stat">
-                                    <span class="stat-number">18</span>
-                                    <span class="stat-label">Joueurs</span>
+                                    <span class="stat-number">-</span>
+                                    <span class="stat-label">Matchs joués</span>
                                 </div>
                                 <div class="stat">
-                                    <span class="stat-number">1</span>
-                                    <span class="stat-label">Entraînement/sem</span>
+                                    <span class="stat-number">-</span>
+                                    <span class="stat-label">Victoires</span>
                                 </div>
                                 <div class="stat">
-                                    <span class="stat-number">Mer</span>
-                                    <span class="stat-label">20h-22h</span>
+                                    <span class="stat-number">-</span>
+                                    <span class="stat-label">Défaites</span>
                                 </div>
                             </div>
-                            <p>Groupe convivial pour adultes débutants et confirmés</p>
+                            <p>Équipe mixte pour le plaisir de jouer ensemble</p>
                             <div class="team-achievements">
-                                <span class="achievement">🎉 Ambiance conviviale</span>
-                                <span class="achievement">👥 Groupe mixte</span>
+                                <span class="achievement">🎉 Convivialité</span>
+                                <span class="achievement">👥 Mixte</span>
                             </div>
                             <div class="team-actions">
                                 <a href="contact.html" class="btn btn-primary">
@@ -151,51 +146,7 @@
                         </div>
                     </div>
 
-                    <div class="team-overview-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="team-card-header">
-                            <div class="team-level">Seniors +50</div>
-                            <div class="team-icon">
-                                <i class="fas fa-leaf"></i>
-                            </div>
-                        </div>
-                        <div class="team-card-content">
-                            <div class="team-photo">
-                                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300&q=80" alt="Groupe Volleyball Seniors">
-                            </div>
-                            <h3>Volleyball Seniors +50</h3>
-                            <div class="team-stats">
-                                <div class="stat">
-                                    <span class="stat-number">12</span>
-                                    <span class="stat-label">Joueurs</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-number">1</span>
-                                    <span class="stat-label">Entraînement/sem</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-number">Ven</span>
-                                    <span class="stat-label">18h-20h</span>
-                                </div>
-                            </div>
-                            <p>Volleyball adapté pour nos joueurs expérimentés</p>
-                            <div class="team-achievements">
-                                <span class="achievement">🏃‍♂️ Sport santé</span>
-                                <span class="achievement">🤝 Esprit familial</span>
-                            </div>
-                            <div class="team-actions">
-                                <a href="contact.html" class="btn btn-primary">
-                                    <i class="fas fa-handshake"></i>
-                                    Nous rejoindre
-                                </a>
-                                <a href="calendrier.html" class="btn btn-outline">
-                                    <i class="fas fa-calendar-alt"></i>
-                                    Horaires
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="team-overview-card" data-aos="fade-up" data-aos-delay="300">
+                    <div style="display: none;">
                         <div class="team-card-header">
                             <div class="team-level">Initiation</div>
                             <div class="team-icon">
@@ -344,7 +295,16 @@
         </div>
     </footer>
 
+    <!-- Modal pour détails équipe -->
+    <div id="teamModal" class="modal">
+        <div class="modal-content team-modal">
+            <span class="close">&times;</span>
+            <div id="teamDetails"></div>
+        </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="script.js"></script>
+    <script src="teams.js"></script>
 </body>
 </html>

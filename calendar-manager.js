@@ -88,6 +88,26 @@ class CalendarManager {
             const dateStr = row['Date'];
             const date = this.parseDate(dateStr);
             
+            // Parser les scores en s'assurant qu'ils sont des nombres valides
+            let scoreNous = row['Score Nous'];
+            let scoreAdversaire = row['Score Adversaire'];
+            
+            // Convertir en nombre si c'est une chaîne qui représente un nombre
+            if (typeof scoreNous === 'string' && scoreNous.trim() !== '') {
+                scoreNous = parseFloat(scoreNous);
+            }
+            if (typeof scoreAdversaire === 'string' && scoreAdversaire.trim() !== '') {
+                scoreAdversaire = parseFloat(scoreAdversaire);
+            }
+            
+            // Si c'est NaN ou une chaîne vide, mettre null
+            if (isNaN(scoreNous) || scoreNous === '' || scoreNous === undefined) {
+                scoreNous = null;
+            }
+            if (isNaN(scoreAdversaire) || scoreAdversaire === '' || scoreAdversaire === undefined) {
+                scoreAdversaire = null;
+            }
+            
             const match = {
                 equipe: row['Equipe'] || '',
                 date: date,
@@ -95,13 +115,18 @@ class CalendarManager {
                 lieu: row['Lieu'] || 'Domicile',
                 adversaire: row['Adversaire'] || '',
                 logo: row['Logo'] || null,
-                scoreNous: row['Score Nous'] || null,
-                scoreAdversaire: row['Score Adversaire'] || null,
+                scoreNous: scoreNous,
+                scoreAdversaire: scoreAdversaire,
                 division: row['Division'] || '',
                 type: row['Type'] || row['Journée'] || 'Championnat' // Support ancien format aussi
             };
             
-            console.log(`Match ${index + 1}: ${match.equipe} vs ${match.adversaire} le ${match.date.toLocaleDateString('fr-FR')} à ${match.heure}`);
+            // Log pour débugger les scores
+            if (scoreNous !== null || scoreAdversaire !== null) {
+                console.log(`Match ${index + 1}: ${match.equipe} vs ${match.adversaire} - Score: ${scoreNous}-${scoreAdversaire}`);
+            } else {
+                console.log(`Match ${index + 1}: ${match.equipe} vs ${match.adversaire} le ${match.date.toLocaleDateString('fr-FR')} à ${match.heure}`);
+            }
             return match;
         });
         
@@ -337,7 +362,10 @@ class CalendarManager {
         const item = document.createElement('div');
         const isHome = match.lieu.toLowerCase() === 'domicile';
         const isPast = match.date < new Date();
-        const hasResult = match.scoreNous !== null && match.scoreAdversaire !== null;
+        // Améliorer la détection des résultats - vérifier que les scores sont des nombres valides
+        const hasResult = match.scoreNous !== null && match.scoreNous !== undefined && match.scoreNous !== '' &&
+                         match.scoreAdversaire !== null && match.scoreAdversaire !== undefined && match.scoreAdversaire !== '' &&
+                         !isNaN(match.scoreNous) && !isNaN(match.scoreAdversaire);
         
         item.className = `chronological-match-item ${isHome ? 'home' : 'away'} ${isPast && !hasResult ? 'past' : ''}`;
         
